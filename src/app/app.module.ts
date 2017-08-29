@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TesteurComponent } from './components/testeur/testeur.component';
+import { GestionTestsDevComponent } from './components/gestion-tests-dev/gestion-tests-dev.component';
+import { ListeTesteursComponent } from './components/liste-testeurs/liste-testeurs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TesteurComponent,
+    GestionTestsDevComponent,
+    ListeTesteursComponent,
   ],
   imports: [
     BrowserModule,
