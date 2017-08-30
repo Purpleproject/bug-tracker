@@ -17,6 +17,7 @@ import {TesteurService} from './services/testeur.service';
 import {EditeurService} from './services/editeur.service';
 import {FicheBugService} from './services/fiche-bug.service';
 import {TestService} from './services/test.service';
+import { ListeUtilisateurComponent } from './liste-utilisateur/liste-utilisateur.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {TestService} from './services/test.service';
     ListeTesteursComponent,
     DeveloppeurComponent,
     FormulaireTestDevComponent,
-    FormAvisComponent,	
+    FormAvisComponent,
+    ListeUtilisateurComponent,	
   ],
   imports: [
     BrowserModule,
