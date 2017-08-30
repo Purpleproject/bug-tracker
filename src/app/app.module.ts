@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { TesteurComponent } from './components/testeur/testeur.component';
 import { GestionTestsDevComponent } from './components/gestion-tests-dev/gestion-tests-dev.component';
 import { ListeTesteursComponent } from './components/liste-testeurs/liste-testeurs.component';
-import { DeveloppeurComponent } from './developpeur/developpeur.component';
+import { DeveloppeurComponent } from './components/developpeur/developpeur.component';
 import { FormulaireTestDevComponent } from './components/formulaire-test-dev/formulaire-test-dev.component';
 
 //Import des services
