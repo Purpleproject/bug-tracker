@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TesteurService } from '../../services/testeur.service';
 import { Testeur } from '../../entities/testeur';
-import { TESTEURS }  from '../../services/mock-testeur.service';
 
 @Component({
   selector: 'app-liste-testeurs',
