@@ -17,7 +17,7 @@ import {TesteurService} from './services/testeur.service';
 import {EditeurService} from './services/editeur.service';
 import {FicheBugService} from './services/fiche-bug.service';
 import {TestService} from './services/test.service';
-import { ListeUtilisateurComponent } from './liste-utilisateur/liste-utilisateur.component';
+import { ListeUtilisateursComponent } from './components/liste-utilisateur/liste-utilisateur.component';
 import { FormulaireTesteurComponent } from './components/formulaire-testeur/formulaire-testeur.component';
 import { FormulaireDeveloppeurComponent } from './components/formulaire-developpeur/formulaire-developpeur.component';
 
@@ -31,7 +31,7 @@ import { FormulaireDeveloppeurComponent } from './components/formulaire-developp
     DeveloppeurComponent,
     FormulaireTestDevComponent,
     FormAvisComponent,
-    ListeUtilisateurComponent,
+    ListeUtilisateursComponent,
     FormulaireTesteurComponent,
     FormulaireDeveloppeurComponent,	
   ],

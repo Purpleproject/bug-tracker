@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import { Testeur } from '../entities/testeur';
-import {TESTEURS} from './mock-testeur.service';
+
 
 @Injectable()
 export class TesteurService {

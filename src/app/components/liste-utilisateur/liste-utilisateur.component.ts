@@ -4,8 +4,8 @@ import { Utilisateur } from '../../entities/utilisateur';
 
 @Component({
   selector: 'app-liste-utilisateurs',
-  templateUrl: './liste-utilisateurs.component.html',
-  styleUrls: ['./liste-utilisateurs.component.css']
+  templateUrl: './liste-utilisateur.component.html',
+  styleUrls: ['./liste-utilisateur.component.css']
 })
 export class ListeUtilisateursComponent implements OnInit {
 
