@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TesteurService } from '../../services/testeur.service'
+import { Testeur } from '../../entities/testeur'
 
 @Component({
   selector: 'app-liste-testeurs',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeTesteursComponent implements OnInit {
 
-  constructor() { }
+  constructor(private testeurService : TesteurService ) { }
 
-  ngOnInit() {
+  ngOnInit() : void {
+    this.testeurs = this.testeurService.obtenirTesteurs();
+
   }
 
+  testeurs: Testeur[] = [];
 }
