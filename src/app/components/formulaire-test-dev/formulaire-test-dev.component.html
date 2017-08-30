@@ -1,41 +1,54 @@
-<!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<body ng-app="myApp" ng-controller="userCtrl">
-
-<div class="w3-container">
-
-<h3>Formulaire de test</h3>
-
-<br>
-
-<form ng-hide="hideform">
-  <h3 ng-show="edit">Creer un nouveau test :</h3>
-    <label>Nom du test :</label>
-    <input class="w3-input w3-border" type="text" ng-model="nTest" ng-disabled="!edit" placeholder="Nom du test">
-  <br>
-    <label>Description :</label>
-    <input class="w3-input w3-border" type="text" ng-model="Description" ng-disabled="!edit" placeholder="Description">
-  <br>
-    <label>Date de publication :</label>
-    <input class="w3-input w3-border" type="password" ng-model="datePubli" placeholder="Date de publication">
-  <br>
-    <label>Date de fin :</label>
-    <input class="w3-input w3-border" type="password" ng-model="dateFin" placeholder="Date de fin">
- <br>
-    <label>Remuneration :</label>
-    <input class="w3-input w3-border" type="password" ng-model="remuneration" placeholder="Remuneration">
- <br>
-    <label>Nombre de testeurs attendu :</label>
-    <input class="w3-input w3-border" type="password" ng-model="nbTesteurAttendus" placeholder="Nombre de testeurs attendu">
-<br>
-<button class="w3-btn w3-green w3-ripple" ng-click="editUser('new')">&#9998; Creer un nouveau test</button>
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Creation d'un test</legend>
+    <div class="form-group">
+      <label for="inputNom" class="col-lg-2 control-label">Nom du test</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputNom" placeholder="Nom" type="text">
+      </div>
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Description</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea"></textarea>
+      </div>
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="inputDateDebut" class="col-lg-2 control-label">Date de publication</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputDateDebut" placeholder="DateDebut" type="text">
+      </div>
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="inputDateFin" class="col-lg-2 control-label">Date de fin</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputDateFin" placeholder="DateFin" type="text">
+      </div>
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="inputRemuneration" class="col-lg-2 control-label">Remuneration</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputRemuneration" placeholder="Remuneration" type="text">
+      </div>
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="inputNbTesteurs" class="col-lg-2 control-label">Nombre de testeurs attendu :</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputNbTesteurs" placeholder="NbTesteurs" type="text">
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Annuler</button>
+        <button type="submit" class="btn btn-primary">Creer</button>
+      </div>
+    </div>
+  </fieldset>
 </form>
-
-</div>
-
-<script src= "myUsers.js"></script>
-
-</body>
-</html>

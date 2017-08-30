@@ -9,6 +9,7 @@ import { GestionTestsDevComponent } from './components/gestion-tests-dev/gestion
 import { ListeTesteursComponent } from './components/liste-testeurs/liste-testeurs.component';
 import { DeveloppeurComponent } from './components/developpeur/developpeur.component';
 import { FormulaireTestDevComponent } from './components/formulaire-test-dev/formulaire-test-dev.component';
+import { FormAvisComponent } from './components/form-avis/form-avis.component';
 
 //Import des services
 import {CandidatureService} from './services/candidature.service';
@@ -17,6 +18,7 @@ import {EditeurService} from './services/editeur.service';
 import {FicheBugService} from './services/fiche-bug.service';
 import {TestService} from './services/test.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import {TestService} from './services/test.service';
     GestionTestsDevComponent,
     ListeTesteursComponent,
     DeveloppeurComponent,
-    FormulaireTestDevComponent,	
+    FormulaireTestDevComponent,
+    FormAvisComponent,	
   ],
   imports: [
     BrowserModule,
