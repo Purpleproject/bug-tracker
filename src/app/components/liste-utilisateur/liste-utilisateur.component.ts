@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { TesteurService } from '../../services/testeur.service';
+import { Testeur } from '../../entities/testeur';
 
 @Component({
-  selector: 'app-liste-utilisateur',
-  templateUrl: './liste-utilisateur.component.html',
-  styleUrls: ['./liste-utilisateur.component.css']
+  selector: 'app-liste-testeurs',
+  templateUrl: './liste-testeurs.component.html',
+  styleUrls: ['./liste-testeurs.component.css']
 })
-export class ListeUtilisateurComponent implements OnInit {
+export class ListeTesteursComponent implements OnInit {
 
-  constructor() { }
+  constructor(private testeurService : TesteurService ) { }
 
-  ngOnInit() {
+  ngOnInit() : void {
+   // this.testeurs = this.testeurService.obtenirTesteurs();
+    this.testeurService.obtenirTesteurs().subscribe(testeurs=>this.testeurs=testeurs);
+
   }
 
+  testeurs: Testeur[] = [];
 }
