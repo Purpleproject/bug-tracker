@@ -18,6 +18,8 @@ import {EditeurService} from './services/editeur.service';
 import {FicheBugService} from './services/fiche-bug.service';
 import {TestService} from './services/test.service';
 import { ListeUtilisateurComponent } from './liste-utilisateur/liste-utilisateur.component';
+import { FormulaireTesteurComponent } from './components/formulaire-testeur/formulaire-testeur.component';
+import { FormulaireDeveloppeurComponent } from './components/formulaire-developpeur/formulaire-developpeur.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { ListeUtilisateurComponent } from './liste-utilisateur/liste-utilisateur
     DeveloppeurComponent,
     FormulaireTestDevComponent,
     FormAvisComponent,
-    ListeUtilisateurComponent,	
+    ListeUtilisateurComponent,
+    FormulaireTesteurComponent,
+    FormulaireDeveloppeurComponent,	
   ],
   imports: [
     BrowserModule,
