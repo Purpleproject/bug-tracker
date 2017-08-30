@@ -14,7 +14,7 @@ export class TestService {
   obtenirTests(): Test [] {
     return undefined;
   }
-
+/*
   //obtenirParId
   obtenirParId(idTest : Number): Test {
     for (let test of undefined) {
@@ -39,5 +39,5 @@ supprimerTest(): void {
 modifierTest(): void {
   //Obtenir les données du formulaire
 }
-  
+  */
 }

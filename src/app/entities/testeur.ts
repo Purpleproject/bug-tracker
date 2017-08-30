@@ -3,8 +3,8 @@ import {FicheBug} from './fiche-bug';
 import {Utilisateur} from './utilisateur';
 
 export class Testeur extends Utilisateur{
-    constructor (nom: String, prenom: String, competence: String, test: Test, bugs: [FicheBug]) {
-                  super();
+    constructor (id: Number, nomUtilisateur: String, mail: String, mdp: String, date: Date, nom: String, prenom: String, competence: String, test: Test, bugs: [FicheBug]) {
+                  super(id, nomUtilisateur,mail, mdp, date);
                     this.nom = nom;
                     this.prenom = prenom;
                     this.competence = competence;
