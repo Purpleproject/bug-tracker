@@ -11,7 +11,7 @@ export class TestService {
 
   //Methode obtenirTous
   obtenirTests(): Test [] {
-    return TEST;
+    return undefined;
   }
 /*
   //obtenirParId
