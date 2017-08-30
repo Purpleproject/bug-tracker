@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Test} from '../entities/test';
 
-
 //Créer un parent qui a les méthodes crud ?
 
 
@@ -12,7 +11,7 @@ export class TestService {
 
   //Methode obtenirTous
   obtenirTests(): Test [] {
-    return undefined;
+    return TEST;
   }
 /*
   //obtenirParId
