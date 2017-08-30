@@ -3,20 +3,20 @@
       <tr>
           <th>Nom</th>
           <th>Prenom</th>
-          <th>Competence</th>
           <th>Mail</th>
           <th>Mot de passe</th>
+          <th>Date d'inscription</th>
           <!--<th>Compétences</th>
               <th>Test</th>-->
       </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let testeur of testeurs">
-          <td>{{testeur.nom}}</td>
-          <td>{{testeur.prenom}}</td>
-          <th>{{testeur.competence}}</th>
-          <th>{{testeur.mail}}</th>
-          <th>{{testeur.mdp}}</th>
+      <tr *ngFor="let utilisateur of utilisateurs">
+          <td>{{utilisateur.nom}}</td>
+          <td>{{utilisateur.prenom}}</td>
+          <td>{{utilisateur.mail}}</td>
+          <td>{{utilisateur.mdp}}</td>
+          <td>{{utilisateur.date}}</td>
           <!--<td *ngFor="let competences of testeur.competences; let i = index; trackBy:trackByIndex">{{testeur.competence[i]}}</td>
               <td>{{testeur.test}}</td>-->
       </tr>

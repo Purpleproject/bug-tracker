@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { TesteurService } from '../../services/testeur.service';
-import { Testeur } from '../../entities/testeur';
+import { UtilisateurServiceService } from '../../services/utilisateur-service.service';
+import { Utilisateur } from '../../entities/utilisateur';
 
 @Component({
-  selector: 'app-liste-testeurs',
-  templateUrl: './liste-testeurs.component.html',
-  styleUrls: ['./liste-testeurs.component.css']
+  selector: 'app-liste-utilisateurs',
+  templateUrl: './liste-utilisateurs.component.html',
+  styleUrls: ['./liste-utilisateurs.component.css']
 })
-export class ListeTesteursComponent implements OnInit {
+export class ListeUtilisateursComponent implements OnInit {
 
-  constructor(private testeurService : TesteurService ) { }
+  constructor(private utilisateurServiceService : UtilisateurServiceService ) { }
 
   ngOnInit() : void {
-   // this.testeurs = this.testeurService.obtenirTesteurs();
-    this.testeurService.obtenirTesteurs().subscribe(testeurs=>this.testeurs=testeurs);
+
+    this.utilisateurServiceService.obtenirUtilisateurs().subscribe(utilisateurs=>this.utilisateurs=utilisateurs);
 
   }
 
-  testeurs: Testeur[] = [];
+  utilisateurs: Utilisateur[] = [];
 }
