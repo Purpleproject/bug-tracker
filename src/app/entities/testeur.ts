@@ -13,6 +13,6 @@ export class Testeur extends Utilisateur{
               prenom: String;
         
               toString(): String {
-                    return (this.nom+" "+ this.prenom+);
+                    return (this.nom+" "+ this.prenom);
               }
 }
