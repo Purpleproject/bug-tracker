@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 import { Testeur } from '../entities/testeur';
 import {TESTEURS} from './mock-testeur.service';
 
 @Injectable()
 export class TesteurService {
 
-  constructor() { }
+  constructor(private http:Http) { }
   //Methode obtenirTous
-  obtenirTesteurs(): Testeur[] {
-    return TESTEURS;
+  obtenirTesteurs() {
+    let link="http://localhost:8080/BugTracker2/mvc/user/listeTesteurs"
+    return this.http.get(link).map(res=> res.json());
   }
 
 }

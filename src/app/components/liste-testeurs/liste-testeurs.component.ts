@@ -12,7 +12,8 @@ export class ListeTesteursComponent implements OnInit {
   constructor(private testeurService : TesteurService ) { }
 
   ngOnInit() : void {
-    this.testeurs = this.testeurService.obtenirTesteurs();
+   // this.testeurs = this.testeurService.obtenirTesteurs();
+    this.testeurService.obtenirTesteurs().subscribe(testeurs=>this.testeurs=testeurs);
 
   }
 
