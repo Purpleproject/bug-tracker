@@ -8,6 +8,13 @@ import { TesteurComponent } from './components/testeur/testeur.component';
 import { GestionTestsDevComponent } from './components/gestion-tests-dev/gestion-tests-dev.component';
 import { ListeTesteursComponent } from './components/liste-testeurs/liste-testeurs.component';
 
+//Import des services
+import {CandidatureService} from './services/candidature.service';
+import {TesteurService} from './services/testeur.service';
+import {EditeurService} from './services/editeur.service';
+import {FicheBugService} from './services/fiche-bug.service';
+import {TestService} from './services/test.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +27,12 @@ import { ListeTesteursComponent } from './components/liste-testeurs/liste-testeu
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    CandidatureService,
+    TesteurService,
+    EditeurService,
+    FicheBugService,
+    TestService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
