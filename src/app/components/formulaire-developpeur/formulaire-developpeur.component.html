@@ -1,31 +1,33 @@
-<form class="form-horizontal">
+<form class="form-horizontal" (ngSubmit)="onSubmit()">
   <fieldset>
-    <legend>Incrisption en tant que testeur</legend>
+    <legend>Incrisption en tant que developpeur</legend>
     <div class="form-group">
       <label for="inputNomUtilisateur" class="col-lg-2 control-label">Nom utilisateur</label>
       <div class="col-lg-10">
-        <input class="form-control" id="inputNomUtilisateur" placeholder="NomUtilisateur" type="text">
+        <input class="form-control" placeholder="NomUtilisateur" type="text"
+        [(ngModel)]="editeur.nomUtilisateur" name="nomUtilisateur" #nomUtilisateur="ngModel" required>
       </div>
     </div>
     <br/>
     <div class="form-group">
       <label for="inputMail" class="col-lg-2 control-label">Mail</label>
       <div class="col-lg-10">
-        <input class="form-control" id="inputMail" placeholder="Mail" type="text">
+        <input class="form-control" placeholder="Mail" type="text"
+        [(ngModel)]="editeur.mail" name="mail" #mail="ngModel" required>
       </div>
     </div>
     <br/>
     <div class="form-group">
       <label for="inputMdp" class="col-lg-2 control-label">Mot de passe</label>
       <div class="col-lg-10">
-        <input class="form-control" id="inputMdp" placeholder="Mdp" type="text">
+        <input class="form-control" placeholder="Mot de passe" type="text"
+        [(ngModel)]="editeur.mdp" name="mdp" #mdp="ngModel" required>
       </div>
     </div>
     <br/>
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Annuler</button>
-        <button type="submit" class="btn btn-primary">Creer</button>
+          <button type="submit" class="btn btn-primary">Creer</button>
       </div>
     </div>
   </fieldset>

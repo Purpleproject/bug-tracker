@@ -2,8 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
 import { TesteurComponent } from './components/testeur/testeur.component';
 import { GestionTestsDevComponent } from './components/gestion-tests-dev/gestion-tests-dev.component';
 import { ListeTesteursComponent } from './components/liste-testeurs/liste-testeurs.component';
@@ -46,7 +49,8 @@ import { CreerTestService } from './services/creer-test.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [
     CandidatureService,
