@@ -10,6 +10,7 @@ import { ListeTesteursComponent } from './components/liste-testeurs/liste-testeu
 import { DeveloppeurComponent } from './components/developpeur/developpeur.component';
 import { FormulaireTestDevComponent } from './components/formulaire-test-dev/formulaire-test-dev.component';
 import { FormAvisComponent } from './components/form-avis/form-avis.component';
+import { FormulaireCandidaterComponent } from './components/formulaire-candidater/formulaire-candidater.component';
 
 //Import des services
 import {CandidatureService} from './services/candidature.service';
@@ -37,6 +38,7 @@ import { ListeTestComponent } from './components/liste-test/liste-test.component
     FormulaireTesteurComponent,
     FormulaireDeveloppeurComponent,
     ListeTestComponent,	
+    FormulaireCandidaterComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,3 +56,4 @@ import { ListeTestComponent } from './components/liste-test/liste-test.component
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
