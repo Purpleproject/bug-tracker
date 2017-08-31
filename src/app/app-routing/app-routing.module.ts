@@ -4,6 +4,8 @@ import { Route } from '@angular/router';
 import { RouterModule } from '@angular/router';
 
 import { TesteurComponent } from '../components/testeur/testeur.component';
+import { ListeTesteursComponent } from '../components/liste-testeurs/liste-testeurs.component';
+import { ListeTestComponent } from '../components/liste-test/liste-test.component';
 import { DeveloppeurComponent } from '../components/developpeur/developpeur.component';
 import { ListeUtilisateursComponent } from '../components/liste-utilisateur/liste-utilisateur.component';
 import { FormulaireCandidaterComponent } from '../components/formulaire-candidater/formulaire-candidater.component';
@@ -12,9 +14,11 @@ import { FormulaireCandidaterComponent } from '../components/formulaire-candidat
 //import components
 
 const routes: Route[] = [
-  //{ path: '', redirectTo: 'candidater', pathMatch:"full" },
+  { path: '', redirectTo: 'pageTesteur', pathMatch:"full" },
   { path: 'pageEditeur', component: DeveloppeurComponent, },
   { path: 'pageTesteur', component: TesteurComponent, },
+  { path: 'pageTesteur/listeTesteurs', component: ListeTesteursComponent, },
+  { path: 'pageTesteur/listeTests', component: ListeTestComponent, },
   { path: 'listeUtilisateurs', component: ListeUtilisateursComponent, },
   { path: 'candidater/:idU/:idT', component: FormulaireCandidaterComponent, },
 
