@@ -10,15 +10,14 @@ export class CandidatureService {
   constructor(private http:Http) { }
 
     //Methode obtenirTous
-    obtenirTesteurs() {
+    obtenirCandidatures() {
       let link="http://localhost:8080/BugTracker2/mvc/candidature/rechercherTout"
       return this.http.get(link).map(res=> res.json());
     }
   
     //Methode creerTesteurs
-    creerTesteurs(Candidature) {
+    creerCand(Candidature) {
       let link="http://localhost:8080/BugTracker2/mvc/candidature/creerCand"
-        return this.http.post(link, Candidature);
+        return this.http.post(link, Candidature).map(res => console.log("je marche"));
       }
-
 }

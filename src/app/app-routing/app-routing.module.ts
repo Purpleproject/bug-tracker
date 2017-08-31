@@ -5,14 +5,14 @@ import { RouterModule } from '@angular/router';
 
 import { TesteurComponent } from '../components/testeur/testeur.component';
 import { ListeUtilisateursComponent } from '../components/liste-utilisateur/liste-utilisateur.component';
+import { FormulaireCandidaterComponent } from '../components/formulaire-candidater/formulaire-candidater.component';
 
 //import components
 
 const routes: Route[] = [
-  //{ path: '', redirectTo: 'listeUtilisateurs'},
-  // pathMatch : charge seulement si l'intégralité de l'url correspond
- { path: 'listeUtilisateurs', component: ListeUtilisateursComponent, },
-  //{ path: 'profil/editer/:id', component: EditionProfilComponent, },
+ //{ path: '', redirectTo: 'candidater', pathMatch:"full" },
+  { path: 'listeUtilisateurs', component: ListeUtilisateursComponent, },
+  { path: 'candidater/:idU/:idT', component: FormulaireCandidaterComponent, },
 ]
 
 
