@@ -1,45 +1,37 @@
 import { Component, OnInit } from '@angular/core';
+import { Test } from '../../entities/test';
+import { TestService } from '../../services/test.service';
 
 @Component({
   selector: 'app-formulaire-test-dev',
   templateUrl: './formulaire-test-dev.component.html',
-  styleUrls: ['./formulaire-test-dev.component.css']
+  styleUrls: ['./formulaire-test-dev.component.css'],
+  styles: [`
+  .ng-valid { border-color: green; }
+  .ng-invalid { border-color: red; } `
+
+  ]
 })
 export class FormulaireTestDevComponent implements OnInit {
 
-  constructor() { }
+  private test : Test = new Test(0, "","", undefined, undefined, "", 0,false, null, null);
+ 
+  constructor(private TestService : TestService) { }
+ 
+  onSubmit(): void {
+
+    console.log(this.test.nomTest);
+    //appel du service :
+    this.TestService.creerTest(this.test);
+    console.log(this.test.nomTest)
+
+  }
+
 
   ngOnInit() {
   }
 
 }
 
-/*
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
 
-import { FormulaireTestDevComponent } from './formulaire-test-dev.component';
 
-describe('FormulaireTesteurComponent', () => {
-  let component: FormulaireTestDevComponent;
-  let fixture: ComponentFixture<FormulaireTestDevComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FormulaireTestDevComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(FormulaireTestDevComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
-*/

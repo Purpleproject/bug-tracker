@@ -1,45 +1,48 @@
 <form class="form-horizontal" (ngSubmit)="onSubmit()">
   <fieldset>
-    <legend>Incrisption en tant que testeureu</legend>
+    <legend>Inscription en tant que testeur</legend>
     <div class="form-group">
       <label for="inputNomUtilisateur" class="col-lg-2 control-label">Nom utilisateur</label>
       <div class="col-lg-10">
-        <input class="form-control" placeholder="NomUtilisateur" type="text" 
-        required [(ngModel)]="testeur.nomUtilisateur" name="nomUtilisateur" #nomUtilisateur="ngModel" required >
+        <input class="form-control" placeholder="NomUtilisateur" type="text" [(ngModel)]="testeur.nomUtilisateur" name="nomUtilisateur"
+          #nomUtilisateur="ngModel" required>
       </div>
     </div>
     <br/>
     <div class="form-group">
       <label for="inputMail" class="col-lg-2 control-label">Mail</label>
       <div class="col-lg-10">
-        <input class="form-control" id="inputMail" placeholder="Mail" type="text">
+        <input class="form-control" placeholder="Mail" type="text" [(ngModel)]="testeur.mail" name="mail" #mail="ngModel"
+          required>
       </div>
     </div>
     <br/>
     <div class="form-group">
-        <label for="inputMdp" class="col-lg-2 control-label">Mot de passe</label>
-        <div class="col-lg-10">
-          <input class="form-control" id="inputMdp" placeholder="Mdp" type="text">
-        </div>
+      <label for="inputMdp" class="col-lg-2 control-label">Mot de passe</label>
+      <div class="col-lg-10">
+        <input class="form-control" placeholder="Mot de passe" type="text" [(ngModel)]="testeur.mdp" name="mdp" #mdp="ngModel"
+          required>
       </div>
-      <br/>
+    </div>
+    <br/>
     <div class="form-group">
       <label for="inputNom" class="col-lg-2 control-label">Nom</label>
       <div class="col-lg-10">
-        <input class="form-control" id="inputNom" placeholder="Nom" type="text">
+        <input class="form-control" placeholder="Nom" type="text" [(ngModel)]="testeur.nom" name="nom" #nom="ngModel" required>
       </div>
     </div>
     <br/>
     <div class="form-group">
       <label for="inputPrenom" class="col-lg-2 control-label">Prenom</label>
       <div class="col-lg-10">
-        <input class="form-control" id="inputPrenom" placeholder="Prenom" type="text">
+        <input class="form-control" placeholder="Prenom" type="text" [(ngModel)]="testeur.prenom" name="Prenom" #Prenom="ngModel"
+          required>
       </div>
     </div>
     <br/>
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-          <button class="btn btn-primary">Creer</button>
+        <button type="submit" class="btn btn-primary">Creer</button>
       </div>
     </div>
   </fieldset>

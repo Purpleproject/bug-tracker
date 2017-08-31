@@ -1,45 +1,56 @@
-<form class="form-horizontal" (ngSubmit)="onSubmit()">
+<form class="form-horizontal">
   <fieldset>
-    <legend>Incrisption en tant que testeureu</legend>
+    <legend>Creation d'un test</legend>
     <div class="form-group">
-      <label for="inputNomUtilisateur" class="col-lg-2 control-label">Nom utilisateur</label>
+      <label for="inputNom" class="col-lg-2 control-label">Nom du test</label>
       <div class="col-lg-10">
-        <input class="form-control" placeholder="NomUtilisateur" type="text" 
-        required [(ngModel)]="testeur.nomUtilisateur" name="nomUtilisateur" #nomUtilisateur="ngModel" required >
+        <input class="form-control" id="inputNom" placeholder="Nom du test" type="text"
+        [(ngModel)]="test.nomTest" name="nomTest" #nomTest="ngModel" required>
       </div>
     </div>
+    <br/><!--
+    <div class="form-group">
+      <label for="textArea" class="col-lg-2 control-label">Description</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="textArea" type="text" 
+         [(ngModel)]="test.description" name="description" #description="ngModel" required></textarea>
+      </div>
+    </div> 
+    <br/> -->
+    <div class="form-group">
+      <label for="inputDateDebut" class="col-lg-2 control-label">Date de publication</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputDateDebut" placeholder="Date de début sous la forme aaaa-mm-jj" type="date"
+        [(ngModel)]="test.datePublication" name="datePublication" #datePublication="ngModel" required>
+      </div>
+    </div> 
     <br/>
     <div class="form-group">
-      <label for="inputMail" class="col-lg-2 control-label">Mail</label>
+      <label for="inputDateFin" class="col-lg-2 control-label">Date de fin</label>
       <div class="col-lg-10">
-        <input class="form-control" id="inputMail" placeholder="Mail" type="text">
-      </div>
+        <input class="form-control" id="inputDateFin" placeholder="Date de fin sous la forme aaaa-mm-jj" type="date"
+        [(ngModel)]="test.dateFin" name="dateFin" #dateFin="ngModel" required> </div>
     </div>
     <br/>
-    <div class="form-group">
-        <label for="inputMdp" class="col-lg-2 control-label">Mot de passe</label>
-        <div class="col-lg-10">
-          <input class="form-control" id="inputMdp" placeholder="Mdp" type="text">
-        </div>
-      </div>
-      <br/>
-    <div class="form-group">
-      <label for="inputNom" class="col-lg-2 control-label">Nom</label>
-      <div class="col-lg-10">
-        <input class="form-control" id="inputNom" placeholder="Nom" type="text">
-      </div>
+    <div class="form-group"> 
+      <label for="inputRemuneration" class="col-lg-2 control-label">Remuneration</label>
+      <div class="col-lg-10"> 
+        <input class="form-control" id="inputRemuneration" placeholder="Rémunération" type="text"
+        [(ngModel)]="test.remuneration" name="remuneration" #remuneration="ngModel" required> </div>
     </div>
     <br/>
-    <div class="form-group">
-      <label for="inputPrenom" class="col-lg-2 control-label">Prenom</label>
+    <div class="form-group"> 
+      <label for="inputNbTesteurs" class="col-lg-2 control-label">Nombre de testeurs attendu :</label>
       <div class="col-lg-10">
-        <input class="form-control" id="inputPrenom" placeholder="Prenom" type="text">
-      </div>
-    </div>
+        <input class="form-control" id="inputNbTesteurs" placeholder="Nombre de testeurs souhaités" type="number"
+        [(ngModel)]="test.nbTesteurAttendu" name="nbTesteurAttendu" #nbTesteurAttendu="ngModel" required> </div>
+    </div> 
+    <br/> 
     <br/>
     <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-          <button class="btn btn-primary">Creer</button>
+      <div class="col-lg-10 col-lg-offset-2"> 
+        <button type="reset" class="btn btn-default">Annuler</button> 
+        <button type="submit" class="btn btn-primary">Creer</button>
       </div>
     </div>
   </fieldset>

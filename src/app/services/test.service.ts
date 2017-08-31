@@ -13,6 +13,12 @@ obtenirTests() {
   let link="http://localhost:8080/BugTracker2/mvc/user/listeTests"
   return this.http.get(link).map(res=> res.json());
 }
+
+ //Methode Creer
+ creerTest (Test) {
+  let link="http://localhost:8080/BugTracker2/mvc/test/creerTest"
+  return this.http.post(link, Test);
+}
 /*
   //obtenirParId
   obtenirParId(idTest : Number): Test {
@@ -25,11 +31,7 @@ obtenirTests() {
       }
     }
 
-  //Methode Creer
-creerTest () : Test {
-  //obtenir les données du formulaire
-  return Test;
-}
+ 
   //Methode Supprimer
 supprimerTest(): void {
   //Obtenir les données de la ligne/formulaire
