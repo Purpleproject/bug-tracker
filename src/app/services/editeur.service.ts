@@ -16,9 +16,10 @@ obtenirEditeurs() {
 }
 
 //Methode creerEditeurs
-creerEditeurs(Editeur) {
+creerEditeur(editeur : Editeur) {
   let link="http://localhost:8080/BugTracker2/mvc/user/creerEditeur"
-    return this.http.post(link, Editeur);
+    return this.http.post(link, editeur)
+           .map(res => console.log("okkkkk !"));;
   }  
 
 }
