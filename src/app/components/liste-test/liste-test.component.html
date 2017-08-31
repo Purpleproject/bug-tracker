@@ -8,7 +8,6 @@
             <th>Date de fin</th>
             <th>Remuneration</th>
             <th>Nombre de Testeur attendu</th>
-            <th>Liste des Testteurs</th>
             <th>Statut modifiable</th>
         </tr>
     </thead>
@@ -17,8 +16,8 @@
             <td>{{test.id}}</td>
             <td>{{test.nomTest}}</td>
             <td>{{test.description}}</td>
-            <td>{{test.datePublication}}</td>
-            <td>{{test.dateFin}}</td>
+            <td><span>{{test.datePublication | date:'longDate'}}</span></td>
+            <td>{{test.dateFin | date:'longDate'}}</td>
             <td>{{test.remuneration}}</td>
             <td>{{test.nbTesteurAttendu}}</td>
             <td>{{test.statut}}</td>
