@@ -8,20 +8,20 @@
             <th>Date de fin</th>
             <th>Remuneration</th>
             <th>Nombre de Testeur attendu</th>
-            <th>Liste des Testteurs ?</th>
-            <th>Statut modifiable ?</th>
+            <th>Liste des Testteurs</th>
+            <th>Statut modifiable</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let test of tests">
-            <th>{{testeur.id}}</th>
-            <td>{{testeur.nomTest}}</td>
-            <td>{{testeur.description}}</td>
-            <th>{{test.datePublication}}</th>
-            <th>{{test.dateFin}}</th>
-            <th>{{test.remuneration}}</th>
-            <th>{{test.nbTesteurAttendu}}</th>
-            <th>{{test.statut}}</th>
+            <td>{{test.id}}</td>
+            <td>{{test.nomTest}}</td>
+            <td>{{test.description}}</td>
+            <td>{{test.datePublication}}</td>
+            <td>{{test.dateFin}}</td>
+            <td>{{test.remuneration}}</td>
+            <td>{{test.nbTesteurAttendu}}</td>
+            <td>{{test.statut}}</td>
         </tr>
     </tbody>
 </table>
