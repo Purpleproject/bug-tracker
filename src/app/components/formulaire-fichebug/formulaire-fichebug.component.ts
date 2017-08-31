@@ -41,7 +41,7 @@ export class FormulaireFichebugComponent implements OnInit {
       }
 
   ngOnInit() {
-   // this.route.params.subscribe(params => { this.idTesteur = +params['idU']; });
+    this.route.params.subscribe(params => { this.idTesteur = +params['idU']; });
     this.route.params.subscribe(params => { this.idTest = +params['idT']; });
   }
 

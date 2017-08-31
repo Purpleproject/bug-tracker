@@ -15,6 +15,7 @@ import { FormulaireTestDevComponent } from '../components/formulaire-test-dev/fo
 import { ListeUtilisateursComponent } from '../components/liste-utilisateur/liste-utilisateur.component';
 import { FormulaireCandidaterComponent } from '../components/formulaire-candidater/formulaire-candidater.component';
 
+import { FormulaireFichebugComponent } from '../components/formulaire-fichebug/formulaire-fichebug.component';
 
 const routes: Route[] = [
   { path: '', redirectTo: 'pageTesteur', pathMatch: "full" },
@@ -29,6 +30,7 @@ const routes: Route[] = [
   { path: 'listeUtilisateurs', component: ListeUtilisateursComponent, },
   { path: 'candidater/:idU/:idT', component: FormulaireCandidaterComponent, },
 
+  {path: 'creerFicheBugEtAssos/:idTest/:idTesteur', component: FormulaireFichebugComponent,},
 ]
 
 
