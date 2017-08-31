@@ -1,5 +1,4 @@
 import {Testeur} from './testeur';
-import {FicheBug} from './fiche-bug';
 
 export class FicheBug {
 
@@ -15,5 +14,5 @@ export class FicheBug {
     id: Number;
     libelle: String; 
     description: String; 
-    statut: boolean; 
+    statut: String; 
 }
