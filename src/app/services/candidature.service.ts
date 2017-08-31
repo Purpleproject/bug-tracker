@@ -15,9 +15,10 @@ export class CandidatureService {
       return this.http.get(link).map(res=> res.json());
     }
   
-    //Methode creerTesteurs
-    creerCand(Candidature) {
+    //Methode creer
+    creerCand(candidature:Candidature) {
+      console.log("abcdefg")
       let link="http://localhost:8080/BugTracker2/mvc/candidature/creerCand"
-        return this.http.post(link, Candidature).map(res => console.log("je marche"));
+        return this.http.post(link, candidature).map(res => console.log("je marche"));
       }
 }

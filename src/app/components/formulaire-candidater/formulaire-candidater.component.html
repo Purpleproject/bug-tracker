@@ -1,7 +1,4 @@
-<p>bla bla bla connard de merde!</p>
-<p>id: {{idTesteur}}</p>
-<p>id: {{idTest}}</p>
-<!--<form class="form-horizontal" (ngSubmit)="onSubmit()">
+<form class="form-horizontal" (ngSubmit)="onSubmit()">
   <fieldset>
     <legend>Candidater à un test</legend>
     <div class="form-group">
@@ -13,14 +10,18 @@
     </div>
     <br/>
     <div class="col-lg-6">
-      <input class="form-control" type="hidden" value="{{idTesteur}}"  name="lettreMotivation">
+      <input class="form-control" type="hidden" value="{{idTesteur}}"  name="idTesteur">
     </div>
-
+    <br/>
+    <div class="col-lg-6">
+      <input class="form-control" type="hidden" value="{{idTest}}"  name="idTest">
+    </div>
+    <br/>
     <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-          <button class="btn btn-primary">Candidater</button>
+      <div class="col-lg-10 col-lg-offset-2"> 
+        <button type="reset" class="btn btn-default">Annuler</button> 
+        <button type="submit" class="btn btn-primary">Envoyer</button>
       </div>
     </div>
   </fieldset>
-</form>-->
-
+</form>
