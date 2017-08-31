@@ -16,9 +16,10 @@ export class TesteurService {
   }
 
   //Methode creerTesteurs
-  creerTesteurs(Testeur) {
+  creerTesteur(testeur : Testeur) {
     let link="http://localhost:8080/BugTracker2/mvc/user/creerTesteur"
-      return this.http.post(link, Testeur);
+      return this.http.post(link, testeur)
+                      .map(res => console.log("okkkkk !"));
     }
 
 }

@@ -14,16 +14,17 @@ import { TesteurService } from '../../services/testeur.service';
 })
 export class FormulaireTesteurComponent implements OnInit {
 
-  private testeur : Testeur = new Testeur(0,"","","",undefined, "","");
+  private testeur : Testeur = new Testeur(0,"","","", new Date(2000,12,12), "","");
 
   
   constructor(private testeurService : TesteurService) { }
   onSubmit(): void {
     
-    console.log(this.testeur.nomUtilisateur);
+    //console.log(this.testeur.nomUtilisateur);
 
     // appel au service :
-    this.testeurService.creerTesteurs(this.testeur);
+    this.testeurService.creerTesteur(this.testeur)
+                .subscribe(res => {console.log("appel envoyé : "+res);})
 
     console.log("plop"+this.testeur.nomUtilisateur);
   }
