@@ -11,7 +11,7 @@ export class ListeTestComponent implements OnInit {
 
   constructor(private testService : TestService ) { }
 
-  ngOnInit() {
+  ngOnInit() : void {
     this.testService.obtenirTests().subscribe(tests=>this.tests=tests);
   }
   tests: Test[] = [];
