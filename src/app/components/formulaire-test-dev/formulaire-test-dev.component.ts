@@ -16,13 +16,14 @@ export class FormulaireTestDevComponent implements OnInit {
 
   private test : Test = new Test(0, "","", undefined, undefined, "", 0,false, null, null);
  
-  constructor(private TestService : TestService) { }
+  constructor(private testService : TestService) { }
  
   onSubmit(): void {
 
     console.log(this.test.nomTest);
     //appel du service :
-    this.TestService.creerTest(this.test);
+    this.testService.creerTest(this.test)
+      .subscribe(res => {console.log("appel envoyé : "+res);});
     console.log(this.test.nomTest)
 
   }

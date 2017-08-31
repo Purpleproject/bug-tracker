@@ -27,7 +27,6 @@ import { FormulaireTesteurComponent } from './components/formulaire-testeur/form
 import { FormulaireDeveloppeurComponent } from './components/formulaire-developpeur/formulaire-developpeur.component';
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { ListeTestComponent } from './components/liste-test/liste-test.component';
-import { CreerTestService } from './services/creer-test.service';
 
 
 @NgModule({
@@ -58,8 +57,7 @@ import { CreerTestService } from './services/creer-test.service';
     EditeurService,
     FicheBugService,
     TestService,
-    UtilisateurServiceService,
-    CreerTestService
+    UtilisateurServiceService
   ],
   bootstrap: [AppComponent]
 })
