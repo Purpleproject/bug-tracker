@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
 import { FicheBug } from '../../entities/fiche-bug';
 import { FicheBugService } from '../../services/fiche-bug.service';
+import { Test } from '../../entities/test';
+import { Testeur } from '../../entities/testeur';
 
 @Component({
   selector: 'app-formulaire-fichebug',
@@ -16,7 +21,14 @@ export class FormulaireFichebugComponent implements OnInit {
 
   private ficheBug : FicheBug = new FicheBug(0, "","", "Non Traité", null, null);
 
-  constructor(private ficheBugService : FicheBugService) { }
+  idTesteur: Number;
+  idTest: Number;
+
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private ficheBugService : FicheBugService
+  ) { }
 
   onSubmit(): void {
     
@@ -29,6 +41,8 @@ export class FormulaireFichebugComponent implements OnInit {
       }
 
   ngOnInit() {
+   // this.route.params.subscribe(params => { this.idTesteur = +params['idU']; });
+    this.route.params.subscribe(params => { this.idTest = +params['idT']; });
   }
 
 }
