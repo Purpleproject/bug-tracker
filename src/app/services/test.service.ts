@@ -15,9 +15,9 @@ obtenirTests() {
 }
 
  //Methode Creer
- creerTest (Test) {
+ creerTest (test : Test) {
   let link="http://localhost:8080/BugTracker2/mvc/test/creerTest"
-  return this.http.post(link, Test);
+  return this.http.post(link, test).map(res => console.log("okkkkk !"));
 }
 /*
   //obtenirParId
