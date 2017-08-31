@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 import {Test} from '../entities/test';
-
-//Créer un parent qui a les méthodes crud ?
-
 
 @Injectable()
 export class TestService {
 
-  constructor() { }
-
-  //Methode obtenirTous
-  obtenirTests(): Test [] {
-    return undefined;
-  }
+  constructor(private http:Http) { }
+//Methode obtenirTous
+obtenirTests() {
+  let link="http://localhost:8080/BugTracker2/mvc/user/listeTests"
+  return this.http.get(link).map(res=> res.json());
+}
 /*
   //obtenirParId
   obtenirParId(idTest : Number): Test {
