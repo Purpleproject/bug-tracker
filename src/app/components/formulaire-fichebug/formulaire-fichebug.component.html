@@ -5,17 +5,17 @@
       <label for="inputLibelle" class="col-lg-2 control-label">Nom du bug</label>
       <div class="col-lg-10">
         <input class="form-control" id="inputLibelle" placeholder="Nom du bug" type="text"
-        [(ngModel)]="fiche-bug.libelle" name="libelle" #libelle="ngModel" required>
+        [(ngModel)]="ficheBug.libelle" name="libelle" #libelle="ngModel" required>
       </div>
     </div>
     <br/> 
     <div class="form-group">
-      <label for="inputDescription" class="col-lg-2 control-label">Description</label>
-      <div class="col-lg-10">
-        <input class="form-control" id="inputDescription" placeholder="Description" type="text"
-        [(ngModel)]="fiche-bug.description" name="description" #description="ngModel" required>
-      </div>
-    </div> 
+        <label for="textAreaDescription" class="col-lg-2 control-label">Description</label>
+        <div class="col-lg-10">
+          <textarea class="form-control" rows="3" id="textAreaDescription" type="text" 
+           [(ngModel)]="ficheBug.description" name="description" #description="ngModel" required></textarea>
+        </div>
+      </div> 
     <br/> 
     <br/>
     <div class="form-group">
