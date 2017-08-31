@@ -1,26 +1,28 @@
-<table class="table table-striped table-hover ">
-    <thead>
-        <tr>
-            <th>id</th>
-            <th>Nom</th>
-            <th>Description</th>
-            <th>Date de publication</th>
-            <th>Date de fin</th>
-            <th>Remuneration</th>
-            <th>Nombre de Testeur attendu</th>
-            <th>Statut modifiable</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let test of tests">
-            <td>{{test.id}}</td>
-            <td>{{test.nomTest}}</td>
-            <td>{{test.description}}</td>
-            <td><span>{{test.datePublication | date:'longDate'}}</span></td>
-            <td>{{test.dateFin | date:'longDate'}}</td>
-            <td>{{test.remuneration}}</td>
-            <td>{{test.nbTesteurAttendu}}</td>
-            <td>{{test.statut}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="col-lg-6 ">
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Date de publication</th>
+                <th>Date de fin</th>
+                <th>Remuneration</th>
+                <th>Nombre de Testeur attendu</th>
+                <th>Statut modifiable</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let test of tests">
+                <td>{{test.id}}</td>
+                <td>{{test.nomTest}}</td>
+                <td>{{test.description}}</td>
+                <td><span>{{test.datePublication | date:'longDate'}}</span></td>
+                <td>{{test.dateFin | date:'longDate'}}</td>
+                <td>{{test.remuneration}}</td>
+                <td>{{test.nbTesteurAttendu}}</td>
+                <td>{{test.statut}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
