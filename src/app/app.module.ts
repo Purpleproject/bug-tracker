@@ -10,6 +10,7 @@ import { ListeTesteursComponent } from './components/liste-testeurs/liste-testeu
 import { DeveloppeurComponent } from './components/developpeur/developpeur.component';
 import { FormulaireTestDevComponent } from './components/formulaire-test-dev/formulaire-test-dev.component';
 import { FormAvisComponent } from './components/form-avis/form-avis.component';
+import { FormulaireCandidaterComponent } from './components/formulaire-candidater/formulaire-candidater.component';
 
 //Import des services
 import {CandidatureService} from './services/candidature.service';
@@ -22,6 +23,7 @@ import { ListeUtilisateursComponent } from './components/liste-utilisateur/liste
 import { FormulaireTesteurComponent } from './components/formulaire-testeur/formulaire-testeur.component';
 import { FormulaireDeveloppeurComponent } from './components/formulaire-developpeur/formulaire-developpeur.component';
 import { LoginBoxComponent } from './components/login-box/login-box.component';
+import { ListeTestComponent } from './components/liste-test/liste-test.component';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { LoginBoxComponent } from './components/login-box/login-box.component';
     FormulaireTesteurComponent,
     FormulaireDeveloppeurComponent,
     LoginBoxComponent,	
+    ListeTestComponent,	
+    FormulaireCandidaterComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,3 +58,4 @@ import { LoginBoxComponent } from './components/login-box/login-box.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

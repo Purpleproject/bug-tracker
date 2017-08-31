@@ -1,0 +1,23 @@
+<form class="form-horizontal" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <legend>Candidater à un test</legend>
+    <div class="form-group">
+      <label for="inputLettreMotivation" class="col-lg-2 control-label">Commentaire</label>
+      <div class="col-lg-6">
+        <input class="form-control" placeholder="lettreMotivation" type="text" 
+        required [(ngModel)]="candidature.lettreMotivation" name="lettreMotivation" #lettreMotivation="ngModel" required >
+      </div>
+    </div>
+    <br/>
+    <div class="col-lg-6">
+      <input class="form-control" placeholder="lettreMotivation" type="hidden" 
+      required [(ngModel)]="candidature.lettreMotivation" name="lettreMotivation" #lettreMotivation="ngModel" required >
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+          <button class="btn btn-primary">Candidater</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
