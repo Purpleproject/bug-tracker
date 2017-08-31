@@ -10,7 +10,7 @@ export class TestService {
   constructor(private http:Http) { }
 //Methode obtenirTous
 obtenirTests() {
-  let link="http://localhost:8080/BugTracker2/mvc/user/listeTests"
+  let link="http://localhost:8080/BugTracker2/mvc/test/rechercherTout"
   return this.http.get(link).map(res=> res.json());
 }
 
