@@ -17,8 +17,8 @@
   <!-- <app-liste-utilisateurs></app-liste-utilisateurs>-->
 
   <router-outlet>
-    
-    </router-outlet>
+
+  </router-outlet>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -39,7 +39,20 @@
     </div>
   </nav>
 
- <!-- <app-testeur></app-testeur>-->
+  <!-- Navigation temporaire entre editeur et testeur-->
+  <nav>
+    <ul class="nav nav-pills">
+      <li><a href="pageEditeur">Page Editeur</a></li>
+      <li><a href="pageTesteur">Page Testeur</a></li>
+    </ul>
+  </nav>
+  <br/>
+
+  <!-- Definition emplacement des pages-->
+  <router-outlet></router-outlet>
+
+  <!-- Balise pour appel temporaire-->
+  <!-- <app-testeur></app-testeur>-->
   <!--
   <div class="col-lg-6 ">
     <app-formulaire-testeur></app-formulaire-testeur>
@@ -50,11 +63,11 @@
 -->
   <!--<app-developpeur></app-developpeur>-->
   <!--<app-formulaire-testeur></app-formulaire-testeur>-->
- <!-- <app-liste-utilisateurs></app-liste-utilisateurs>-->
- <div class="col-lg-6 ">
-<!--<app-formulaire-test-dev></app-formulaire-test-dev>-->
-<app-liste-test></app-liste-test>
-</div>
+  <!-- <app-liste-utilisateurs></app-liste-utilisateurs>-->
+  <div class="col-lg-6 ">
+    <!--<app-formulaire-test-dev></app-formulaire-test-dev>-->
+    <app-liste-test></app-liste-test>
+  </div>
 </body>
 
 </html>
