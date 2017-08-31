@@ -18,25 +18,32 @@ import { Testeur } from '../../entities/testeur';
 
 export class FormulaireCandidaterComponent implements OnInit {
 
-  private candidature : Candidature = new Candidature(0, 0, "","", false, undefined, undefined);
+  private candidature: Candidature = new Candidature(0, 0, "", "", false, undefined, undefined);
 
   idTesteur: Number;
-  idTest:Number;
+  idTest: Number;
 
 
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private candidatureService:CandidatureService
+    private candidatureService: CandidatureService
   ) { }
 
-onsubmit():void{
-  this.candidatureService.creerCand(this.candidature).subscribe(res=>{console.log("appel envoyé : "+res);})
-console.log("onsubmit ok "+this.candidature.lettreMotivation);
-}
+  onSubmit(): void {
+    console.log("onsubmit ok ");
+    this.candidature.note=0;
+    this.candidature.commentaireNote="bbb";
+    this.candidature.statut=false;
+    this.candidature.test=undefined;
+    this.candidature.testeur=undefined;
+    this.candidatureService.creerCand(this.candidature).subscribe(res => { console.log("appel envoyé : " + res); })
+    console.log("onsubmit ok ");
+    
+  }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {this.idTesteur = +params['idU'];});
-    this.route.params.subscribe(params => {this.idTest = +params['idT'];});
+    this.route.params.subscribe(params => { this.idTesteur = +params['idU']; });
+    this.route.params.subscribe(params => { this.idTest = +params['idT']; });
   }
 }

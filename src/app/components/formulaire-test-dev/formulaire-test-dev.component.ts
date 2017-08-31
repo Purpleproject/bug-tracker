@@ -14,7 +14,7 @@ import { TestService } from '../../services/test.service';
 })
 export class FormulaireTestDevComponent implements OnInit {
 
-  private test : Test = new Test(0, "","", undefined, undefined, "", 0,false, null, null);
+  private test : Test = new Test(0, "","", undefined, undefined, "", 0,undefined, null, null);
  
   constructor(private testService : TestService) { }
  
