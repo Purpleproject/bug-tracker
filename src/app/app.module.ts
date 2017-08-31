@@ -22,6 +22,7 @@ import { ListeUtilisateursComponent } from './components/liste-utilisateur/liste
 import { FormulaireTesteurComponent } from './components/formulaire-testeur/formulaire-testeur.component';
 import { FormulaireDeveloppeurComponent } from './components/formulaire-developpeur/formulaire-developpeur.component';
 import { ListeTestComponent } from './components/liste-test/liste-test.component';
+import { CreerTestService } from './services/creer-test.service';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ListeTestComponent } from './components/liste-test/liste-test.component
     EditeurService,
     FicheBugService,
     TestService,
-    UtilisateurServiceService
+    UtilisateurServiceService,
+    CreerTestService
   ],
   bootstrap: [AppComponent]
 })
