@@ -25,6 +25,7 @@ import { UtilisateurServiceService } from './services/utilisateur-service.servic
 import { ListeUtilisateursComponent } from './components/liste-utilisateur/liste-utilisateur.component';
 import { FormulaireTesteurComponent } from './components/formulaire-testeur/formulaire-testeur.component';
 import { FormulaireDeveloppeurComponent } from './components/formulaire-developpeur/formulaire-developpeur.component';
+import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { ListeTestComponent } from './components/liste-test/liste-test.component';
 
 
@@ -40,6 +41,7 @@ import { ListeTestComponent } from './components/liste-test/liste-test.component
     ListeUtilisateursComponent,
     FormulaireTesteurComponent,
     FormulaireDeveloppeurComponent,
+    LoginBoxComponent,	
     ListeTestComponent,	
     FormulaireCandidaterComponent,
   ],
