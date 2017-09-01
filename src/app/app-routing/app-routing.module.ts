@@ -22,7 +22,7 @@ import { FormulaireCandidaterComponent } from '../components/formulaire-candidat
 import { FormulaireFichebugComponent } from '../components/formulaire-fichebug/formulaire-fichebug.component';
 
 const routes: Route[] = [
-  { path: '', redirectTo: 'pageTesteur', pathMatch: "full" },
+  //{ path: '', redirectTo: '', pathMatch: "full" },
   // Inscription
   { path: 'inscriptionTesteur', component: FormulaireTesteurComponent, },
   { path: 'inscriptionEditeur', component: FormulaireDeveloppeurComponent, },
