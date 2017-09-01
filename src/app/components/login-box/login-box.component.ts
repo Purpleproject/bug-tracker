@@ -27,20 +27,27 @@ export class LoginBoxComponent implements OnInit {
   }
   login() {
    
-    this.loginService.login(this.user.mail, this.user.mdp)
+    this.loginService.login(this.user)
         .subscribe(
-            data => {
-                //this.router.navigate([this.returnUrl]);
-                if(this.user.role=="testeur"){
-                  this.router.navigate(['/pageTesteur']);
-                }
-                else if (this.user.role=="editeur") {
-                  
-                  this.router.navigate(['/pageEditeur']);
-                } else {
-                  return null;
-                  
-                }
+            user => {
+              this.user = user;
+              if (user.id > 0)
+              {
+                  console.log("login OK !");
+                  console.log(user);
+                  //this.router.navigate([this.returnUrl]);
+                  if(this.user.role=="testeur"){
+                    this.router.navigate(['/pageTesteur']);
+                  }
+                  else if (this.user.role=="editeur") {
+                    
+                    this.router.navigate(['/pageEditeur']);
+                  }
+              }
+              else
+              {
+                console.log("echec login :/");
+              }
             })
 }
 

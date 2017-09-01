@@ -13,18 +13,10 @@ export class LoginService {
 
   }
 
-  login(mail: String, mdp: String) {
+  login(user:User) {
     let link="http://localhost:8080/BugTracker2/mvc/authentification/login";
-    return this.http.post(link, 'mail=' + mail + '&mdp=' + mdp)
-        .map((response: Response) => {
-            // login successful if there's a jwt token in the response
-            let user = response.json();
-            if (user && user.token) {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('user', JSON.stringify(user));
-            }
-            return user;
-        });
+    return this.http.post(link,user)
+        .map(user => user.json());
       }
 
    logout() {
