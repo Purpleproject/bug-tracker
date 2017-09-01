@@ -26,26 +26,5 @@ obtenirTestId(id:Number) {
   return this.http.get(link).map(res=> res.json());
 }
 
-/*
-  //obtenirParId
-  obtenirParId(idTest : Number): Test {
-    for (let test of undefined) {
-        if (test.id == idTest) {
-            return test;
-        } else{
-            return undefined;
-        }
-      }
-    }
 
- 
-  //Methode Supprimer
-supprimerTest(): void {
-  //Obtenir les données de la ligne/formulaire
-}
-  //Methode Modifier
-modifierTest(): void {
-  //Obtenir les données du formulaire
-}
-  */
 }
