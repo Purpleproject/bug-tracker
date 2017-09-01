@@ -28,6 +28,7 @@ import { FormulaireDeveloppeurComponent } from './components/formulaire-developp
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { ListeTestComponent } from './components/liste-test/liste-test.component';
 import { FormulaireFichebugComponent } from './components/formulaire-fichebug/formulaire-fichebug.component';
+import { ListeTestParIdComponent } from './components/liste-test-par-id/liste-test-par-id.component';
 
 
 @NgModule({
@@ -44,7 +45,7 @@ import { FormulaireFichebugComponent } from './components/formulaire-fichebug/fo
     FormulaireDeveloppeurComponent,
     LoginBoxComponent,	
     ListeTestComponent,	
-    FormulaireCandidaterComponent, FormulaireFichebugComponent,
+    FormulaireCandidaterComponent, FormulaireFichebugComponent, ListeTestParIdComponent,
   ],
   imports: [
     BrowserModule,
