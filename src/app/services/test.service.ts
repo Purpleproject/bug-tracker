@@ -19,6 +19,13 @@ obtenirTests() {
   let link="http://localhost:8080/BugTracker2/mvc/test/creerTest"
   return this.http.post(link, test).map(res => console.log("okkkkk !"));
 }
+
+//Methode obtenirTous
+obtenirTestId(id:Number) {
+  let link="http://localhost:8080/BugTracker2/mvc/test/testId?pId="+id;
+  return this.http.get(link).map(res=> res.json());
+}
+
 /*
   //obtenirParId
   obtenirParId(idTest : Number): Test {

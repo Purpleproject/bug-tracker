@@ -1,10 +1,10 @@
 import {Testeur} from './testeur';
-import {FicheBug} from './fiche-bug';
+
 
 export class FicheBug {
 
     constructor(id: Number, libelle: String, description: String,
-         statut: String) {
+         statut: boolean) {
 
         this.id = id;
         this.libelle= libelle;
