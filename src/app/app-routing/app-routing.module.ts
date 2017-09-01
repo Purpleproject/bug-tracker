@@ -39,7 +39,7 @@ const routes: Route[] = [
   { path: 'listeUtilisateurs', component: ListeUtilisateursComponent, },
   { path: 'candidater/:idU/:idT', component: FormulaireCandidaterComponent, },
 
-  //{path: 'pageTesteur/creerFicheBug/:idTest/:idTesteur', component: FormulaireFichebugComponent,},
+  {path: 'pageTesteur/listeTest/ajouterBug/:idTest/:idTesteur', component: FormulaireFichebugComponent,},
 ]
 
 
