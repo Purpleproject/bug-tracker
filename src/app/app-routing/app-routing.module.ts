@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Route } from '@angular/router';
 import { RouterModule } from '@angular/router';
 
+// Import Inscription
+import { FormulaireTesteurComponent } from '../components/formulaire-testeur/formulaire-testeur.component';
+import { FormulaireDeveloppeurComponent } from '../components/formulaire-developpeur/formulaire-developpeur.component';
+
 // Les imports testeurs
 import { TesteurComponent } from '../components/testeur/testeur.component';
 import { ListeTesteursComponent } from '../components/liste-testeurs/liste-testeurs.component';
@@ -19,9 +23,14 @@ import { FormulaireFichebugComponent } from '../components/formulaire-fichebug/f
 
 const routes: Route[] = [
   { path: '', redirectTo: 'pageTesteur', pathMatch: "full" },
+  // Inscription
+  { path: 'inscriptionTesteur', component: FormulaireTesteurComponent, },
+  { path: 'inscriptionEditeur', component: FormulaireDeveloppeurComponent, },
+
   // Les imports editeurs
   { path: 'pageEditeur', component: DeveloppeurComponent, },
   { path: 'pageEditeur/creationTest', component: FormulaireTestDevComponent, },
+
   // Les imports testeurs
   { path: 'pageTesteur', component: TesteurComponent, },
   { path: 'pageTesteur/listeTesteurs', component: ListeTesteursComponent, },
@@ -30,7 +39,7 @@ const routes: Route[] = [
   { path: 'listeUtilisateurs', component: ListeUtilisateursComponent, },
   { path: 'candidater/:idU/:idT', component: FormulaireCandidaterComponent, },
 
-  {path: 'creerFicheBugEtAssos/:idTest/:idTesteur', component: FormulaireFichebugComponent,},
+  {path: 'pageTesteur/listeTest/ajouterBug/:idTest/:idTesteur', component: FormulaireFichebugComponent,},
 ]
 
 
