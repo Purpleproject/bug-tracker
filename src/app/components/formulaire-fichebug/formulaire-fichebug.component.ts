@@ -36,19 +36,20 @@ export class FormulaireFichebugComponent implements OnInit {
 
   onSubmit(): void {
     
-        console.log(this.ficheBug.libelle);
-        console.log("onsubmit ok ");
-        this.ficheBug.libelle="";
-        this.ficheBug.description="";
+        //console.log(this.ficheBug.libelle);
+        //console.log("onsubmit ok ");
+        console.log("test1");
         this.ficheBug.statut= "Non Traité";
         this.testService.obtenirTestId(this.idTest).subscribe(test => this.ficheBug.test = test);
         this.testeurService.obtenirTesteurId(this.idTesteur).subscribe(testeur => this.ficheBug.testeur = testeur );
-        console.log(this.ficheBug.testeur.nom);
-        console.log(this.ficheBug.test.nomTest);
+        console.log("test2");
+        //console.log(this.ficheBug.testeur.nom);
+        //console.log(this.ficheBug.test.nomTest);
         //appel du service :
         this.ficheBugService.creerFicheBug(this.ficheBug)
-          .subscribe(res => {console.log("appel envoyé : "+res);});
-        console.log(this.ficheBug.libelle);
+          .subscribe(res => {console.log("appel envoyé : ");});
+          console.log("test3");
+       // console.log(this.ficheBug.libelle);
     
       }
 

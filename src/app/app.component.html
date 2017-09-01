@@ -8,8 +8,11 @@
 </head>
 
 <body>
-  <h1>C'est trop génial</h1>
-
+  <!--<h1 style="text-align:center">Bug Tracker 4.0.4!! </h1>
+  <h2 style="text-align:center">Trouve ton bug!!</h2>-->
+ <div class="container">
+  <div class="col-md-4 col-md-offset-2"><img src="../../../img/logo.jpg" rel="stylesheet" /></div></div>
+<br/>
   <!-- NavBar-->
   <ul class="nav nav-tabs">
     <li class="active"><a routerLink="" data-toggle="tab">Home</a></li>
@@ -22,16 +25,7 @@
     </li>
   </ul>
   <br/>
-
-  <!-- Navigation temporaire entre editeur et testeur-->
-  <nav>
-    <ul class="nav nav-pills">
-      <li><a routerLink="pageEditeur">Page Editeur</a></li>
-      <li><a routerLink="pageTesteur">Page Testeur</a></li>
-    </ul>
-  </nav>
-<br/>
-
+  
   <!-- Definition emplacement des pages-->
   <router-outlet></router-outlet>
 

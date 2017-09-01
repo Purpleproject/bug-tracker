@@ -13,22 +13,23 @@ import { CandidatureService } from '../../services/candidature.service'
 })
 export class ListeTestParIdComponent implements OnInit {
 
-  constructor(private testService : TestService,
+ /** constructor(private testService : TestService,
   private candidatureService : CandidatureService,
   ) { }
 
   candidatures:Candidature[];
-  candidature:Candidature;
+  candidature:Candidature;*/
 
   ngOnInit() : void {
     
-    this.candidatureService.obtenirCandidatureParTesteur(this.candidature).subscribe(tests=>this.tests=tests);
+   
+
     
     
   }
-  /** */
+/** 
   tests: Test[] = [];
-  idTest : Number; */
-}
+  idTest : Number; 
+}*/
 
 }

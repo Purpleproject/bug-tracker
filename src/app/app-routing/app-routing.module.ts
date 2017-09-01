@@ -22,8 +22,12 @@ import { FormulaireCandidaterComponent } from '../components/formulaire-candidat
 
 import { FormulaireFichebugComponent } from '../components/formulaire-fichebug/formulaire-fichebug.component';
 
+// import image 
+import { ImageAccueilComponent } from '../components/image-accueil/image-accueil.component';
+
 const routes: Route[] = [
-  //{ path: '', redirectTo: '', pathMatch: "full" },
+  {path:'accueil', component: ImageAccueilComponent},
+  { path: '', redirectTo: 'accueil', pathMatch: "full" },
   // Inscription
   { path: 'inscriptionTesteur', component: FormulaireTesteurComponent, },
   { path: 'inscriptionEditeur', component: FormulaireDeveloppeurComponent, },

@@ -30,6 +30,7 @@ import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { ListeTestComponent } from './components/liste-test/liste-test.component';
 import { FormulaireFichebugComponent } from './components/formulaire-fichebug/formulaire-fichebug.component';
 import { ListeTestParIdComponent } from './components/liste-test-par-id/liste-test-par-id.component';
+import { ImageAccueilComponent } from './components/image-accueil/image-accueil.component';
 
 
 @NgModule({
@@ -46,7 +47,7 @@ import { ListeTestParIdComponent } from './components/liste-test-par-id/liste-te
     FormulaireDeveloppeurComponent,
     LoginBoxComponent,	
     ListeTestComponent,	
-    FormulaireCandidaterComponent, FormulaireFichebugComponent, ListeTestParIdComponent,
+    FormulaireCandidaterComponent, FormulaireFichebugComponent, ListeTestParIdComponent, ImageAccueilComponent,
   ],
   imports: [
     BrowserModule,

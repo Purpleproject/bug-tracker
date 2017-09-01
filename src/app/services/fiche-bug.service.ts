@@ -11,7 +11,9 @@ export class FicheBugService {
 
   //Methode Creer
   creerFicheBug (fichebug : FicheBug){
+    console.log("test4");
     let link="http://localhost:8080/BugTracker2/mvc/ficheBug/creerFicheBug"
+    console.log("test5");
     return this.http.post(link, fichebug).map(res => console.log("ok!"));
   }
 
