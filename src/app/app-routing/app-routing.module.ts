@@ -29,7 +29,7 @@ const routes: Route[] = [
 
   // Les imports editeurs
   { path: 'pageEditeur', component: DeveloppeurComponent, },
-  { path: 'pageEditeur/creationTest', component: FormulaireTestDevComponent, },
+  { path: 'pageEditeur/creationTest/:idE', component: FormulaireTestDevComponent, },
 
   // Les imports testeurs
   { path: 'pageTesteur', component: TesteurComponent, },
