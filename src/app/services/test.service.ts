@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import {Test} from '../entities/test';
+import { Candidature} from '../entities/candidature';
 
 @Injectable()
 export class TestService {
@@ -25,6 +26,7 @@ obtenirTestId(id:Number) {
   let link="http://localhost:8080/BugTracker2/mvc/test/testId?pId="+id;
   return this.http.get(link).map(res=> res.json());
 }
+
 
 
 }

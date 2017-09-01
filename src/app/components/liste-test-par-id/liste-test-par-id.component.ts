@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
+
 import { TestService } from '../../services/test.service';
 import { Test } from '../../entities/test';
+import { Candidature } from '../../entities/candidature';
+import { CandidatureService } from '../../services/candidature.service'
 
 @Component({
   selector: 'app-liste-test-par-id',
@@ -9,13 +13,22 @@ import { Test } from '../../entities/test';
 })
 export class ListeTestParIdComponent implements OnInit {
 
-  constructor(private testService : TestService) { }
+  constructor(private testService : TestService,
+  private candidatureService : CandidatureService,
+  ) { }
 
-  
+  candidatures:Candidature[];
+  candidature:Candidature;
+
   ngOnInit() : void {
-    this.testService.obtenirTestId(this.idTest).subscribe(tests=>this.tests=tests);
+    
+    this.candidatureService.obtenirCandidatureParTesteur(this.candidature).subscribe(tests=>this.tests=tests);
+    
+    
   }
+  /** */
   tests: Test[] = [];
-  idTest : Number;
+  idTest : Number; */
 }
 
+}
