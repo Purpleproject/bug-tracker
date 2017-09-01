@@ -11,6 +11,7 @@ import { FormulaireDeveloppeurComponent } from '../components/formulaire-develop
 import { TesteurComponent } from '../components/testeur/testeur.component';
 import { ListeTesteursComponent } from '../components/liste-testeurs/liste-testeurs.component';
 import { ListeTestComponent } from '../components/liste-test/liste-test.component';
+import { ListeTestParIdComponent } from '../components/liste-test-par-id/liste-test-par-id.component';
 
 // Les imports editeurs
 import { DeveloppeurComponent } from '../components/developpeur/developpeur.component';
@@ -35,6 +36,7 @@ const routes: Route[] = [
   { path: 'pageTesteur', component: TesteurComponent, },
   { path: 'pageTesteur/listeTesteurs', component: ListeTesteursComponent, },
   { path: 'pageTesteur/listeTests', component: ListeTestComponent, },
+  { path: 'pageTesteur/listeTestsIdTesteur', component: ListeTestParIdComponent, },
 
   { path: 'listeUtilisateurs', component: ListeUtilisateursComponent, },
   { path: 'candidater/:idU/:idT', component: FormulaireCandidaterComponent, },
