@@ -1,4 +1,4 @@
-<div class="col-lg-6 ">
+<div class="col-lg-10 ">
     <table class="table table-striped table-hover ">
         <thead>
             <tr>
@@ -10,6 +10,7 @@
                 <th>Remuneration</th>
                 <th>Nombre de Testeur attendu</th>
                 <th>Statut modifiable</th>
+                <th>Candidater</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 <td>{{test.remuneration}}</td>
                 <td>{{test.nbTesteurAttendu}}</td>
                 <td>{{test.statut}}</td>
+                <td><a routerLink="/candidater/:idU/:idT" class="btn btn-success">Je candidate</a></td>
             </tr>
         </tbody>
     </table>

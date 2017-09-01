@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
 import { TestService } from '../../services/test.service';
 import { Test } from '../../entities/test';
 
@@ -9,7 +12,10 @@ import { Test } from '../../entities/test';
 })
 export class ListeTestComponent implements OnInit {
 
-  constructor(private testService : TestService ) { }
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private testService : TestService ) { }
 
   ngOnInit() : void {
     this.testService.obtenirTests().subscribe(tests=>this.tests=tests);
