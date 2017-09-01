@@ -22,4 +22,9 @@ export class TesteurService {
                       .map(res => console.log("okkkkk !"));
     }
 
+    //Methode obtenirTous
+  obtenirTesteurId(id:Number) {
+    let link="http://localhost:8080/BugTracker2/mvc/user/testeurId?pId="+id;
+    return this.http.get(link).map(res=> res.json());
+  }
 }

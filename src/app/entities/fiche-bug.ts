@@ -1,10 +1,11 @@
 import {Testeur} from './testeur';
+
 import { Test } from './test';
 
 export class FicheBug {
 
     constructor(id: Number, libelle: String, description: String,
-         statut: String, testeur: Testeur, test: Test) {
+         statut: String,testeur:Testeur,test:Test) {
 
         this.id = id;
         this.libelle= libelle;

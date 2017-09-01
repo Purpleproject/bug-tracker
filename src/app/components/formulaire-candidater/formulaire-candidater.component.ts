@@ -4,7 +4,10 @@ import { Location } from '@angular/common';
 
 import { Candidature } from '../../entities/candidature';
 import { CandidatureService } from '../../services/candidature.service';
+import { TesteurService } from '../../services/testeur.service';
+import { TestService } from '../../services/test.service';
 import { Testeur } from '../../entities/testeur';
+import { Test } from '../../entities/test';
 
 @Component({
   selector: 'app-formulaire-candidater',
@@ -27,16 +30,18 @@ export class FormulaireCandidaterComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private candidatureService: CandidatureService
+    private candidatureService: CandidatureService,
+    private testeurService : TesteurService,
+    private testService : TestService,
   ) { }
 
   onSubmit(): void {
     console.log("onsubmit ok ");
     this.candidature.note=0;
-    this.candidature.commentaireNote="bbb";
+    this.candidature.commentaireNote="";
     this.candidature.statut=false;
-    this.candidature.test=undefined;
-    this.candidature.testeur=undefined;
+    this.testService.obtenirTestId(this.idTest).subscribe(test => this.candidature.test = test);
+    this.testeurService.obtenirTesteurId(this.idTesteur).subscribe(testeur => this.candidature.testeur = testeur );
     this.candidatureService.creerCand(this.candidature).subscribe(res => { console.log("appel envoyé : " + res); })
     console.log("onsubmit ok ");
     
