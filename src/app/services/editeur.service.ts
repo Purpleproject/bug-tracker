@@ -22,4 +22,10 @@ creerEditeur(editeur : Editeur) {
            .map(res => console.log("okkkkk !"));;
   }  
 
+//Methode obtenirTous
+obtenirEditeurId(id:Number) {
+  let link="http://localhost:8080/BugTracker2/mvc/user/EditeurId?pId="+id;
+  return this.http.get(link).map(res=> res.json());
+}
+
 }
