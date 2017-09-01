@@ -30,7 +30,7 @@ const routes: Route[] = [
   { path: 'listeUtilisateurs', component: ListeUtilisateursComponent, },
   { path: 'candidater/:idU/:idT', component: FormulaireCandidaterComponent, },
 
-  {path: 'creerFicheBugEtAssos/:idTest/:idTesteur', component: FormulaireFichebugComponent,},
+  //{path: 'pageTesteur/creerFicheBug/:idTest/:idTesteur', component: FormulaireFichebugComponent,},
 ]
 
 
