@@ -21,6 +21,7 @@ import {TesteurService} from './services/testeur.service';
 import {EditeurService} from './services/editeur.service';
 import {FicheBugService} from './services/fiche-bug.service';
 import {TestService} from './services/test.service';
+import {LoginService} from './services/login.service';
 import { UtilisateurServiceService } from './services/utilisateur-service.service';
 import { ListeUtilisateursComponent } from './components/liste-utilisateur/liste-utilisateur.component';
 import { FormulaireTesteurComponent } from './components/formulaire-testeur/formulaire-testeur.component';
@@ -59,7 +60,8 @@ import { ListeTestParIdComponent } from './components/liste-test-par-id/liste-te
     EditeurService,
     FicheBugService,
     TestService,
-    UtilisateurServiceService
+    UtilisateurServiceService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
