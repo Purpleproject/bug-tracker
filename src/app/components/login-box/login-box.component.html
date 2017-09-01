@@ -1,5 +1,7 @@
-<form>
-<input type="text" placeholder="login" name="login"/>
-<input type="password" placeholder="mot de passe"/>
-<button>Login</button>
-</form>
+<div class="well well-sm">
+    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+        <input type="text" placeholder="login" [(ngModel)]="user.mail" name="login" #mail="ngModel" required/>
+        <input type="password" placeholder="mot de passe" [(ngModel)]="user.mdp" name="mot de passe" #mdp="ngModel" required/>
+        <button>Login</button>
+    </form>
+</div>

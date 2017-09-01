@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import{ LoginService } from '../../services/login.service';
 
-import { Utilisateur } from '../../entities/utilisateur';
+import { User } from '../../entities/user';
 
 @Component({
   selector: 'app-login-box',
@@ -9,12 +11,44 @@ import { Utilisateur } from '../../entities/utilisateur';
 })
 export class LoginBoxComponent implements OnInit {
 
-  login:String ="";
-  password:String="";
+  
+  user:User=new User();
 
-  constructor() { }
+
+  constructor(
+    private route:ActivatedRoute,
+    private router:Router,
+    private loginService :LoginService,
+  
+) { }
 
   ngOnInit() {
+    this.loginService.logout();
   }
+  login() {
+   
+    this.loginService.login(this.user)
+        .subscribe(
+            user => {
+              this.user = user;
+              if (user.id > 0)
+              {
+                  console.log("login OK !");
+                  console.log(user);
+                  //this.router.navigate([this.returnUrl]);
+                  if(this.user.role=="testeur"){
+                    this.router.navigate(['/pageTesteur']);
+                  }
+                  else if (this.user.role=="editeur") {
+                    
+                    this.router.navigate(['/pageEditeur']);
+                  }
+              }
+              else
+              {
+                console.log("echec login :/");
+              }
+            })
+}
 
 }
