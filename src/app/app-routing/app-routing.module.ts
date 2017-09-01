@@ -37,9 +37,10 @@ const routes: Route[] = [
   { path: 'pageTesteur/listeTesteurs', component: ListeTesteursComponent, },
   { path: 'pageTesteur/listeTests', component: ListeTestComponent, },
   { path: 'pageTesteur/listeTestsIdTesteur', component: ListeTestParIdComponent, },
+  { path: 'candidater/:idU/:idT', component: FormulaireCandidaterComponent, },
 
   { path: 'listeUtilisateurs', component: ListeUtilisateursComponent, },
-  { path: 'candidater/:idU/:idT', component: FormulaireCandidaterComponent, },
+  
 
   {path: 'pageTesteur/listeTest/ajouterBug/:idTest/:idTesteur', component: FormulaireFichebugComponent,},
 ]
